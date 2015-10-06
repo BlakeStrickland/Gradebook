@@ -22,9 +22,14 @@ class TeachersController < ApplicationController
   # POST /teachers
   def create
     @teacher = Teacher.new(teacher_params)
-
+    @student = Student.new(student_params)
     if @teacher.save
       redirect_to @teacher, notice: 'Teacher was successfully created.'
+    else
+      render :new
+    end
+    if @student.save
+      redirect_to @student, notice: 'Student was successfully created.'
     else
       render :new
     end

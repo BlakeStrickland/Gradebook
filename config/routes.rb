@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'logins/index'
+
+  root 'logins#index'
+
   resources :parents
   resources :students
   resources :teachers
