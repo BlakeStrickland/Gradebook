@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   get 'users/index'
   post 'users/index'
-
+  delete 'users/index'
   root 'users#index'
 
   resources :parents
