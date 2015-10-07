@@ -1,0 +1,10 @@
+
+<%= form_tag(users_index_path) do %>
+  <div>
+    Email: <%= text_field_tag :email %>
+  </div>
+  <div>
+    Password: <%= text_field_tag :password_digest %>
+  </div>
+  <%= submit_tag %>
+<% end %>

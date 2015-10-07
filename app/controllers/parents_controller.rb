@@ -12,7 +12,9 @@ class ParentsController < ApplicationController
 
   # GET /parents/new
   def new
-    @parent = Parent.new
+
+      @parent = Parent.new
+    
   end
 
   # GET /parents/1/edit

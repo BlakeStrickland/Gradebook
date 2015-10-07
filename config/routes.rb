@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
-  get 'logins/index'
+  get 'users/index'
+  post 'users/index'
 
-  root 'logins#index'
+  root 'users#index'
 
   resources :parents
   resources :students
