@@ -1,5 +1,6 @@
 class StudentsController < ApplicationController
   before_action :set_student, only: [:show, :edit, :update, :destroy]
+  before_action :logged_in?
 
 
 
@@ -15,6 +16,7 @@ class StudentsController < ApplicationController
   # GET /students/new
   def new
     @student = Student.new
+    @student.teacher_id = session[:log_in_teacher]
   end
 
   # GET /students/1/edit

@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
-  get 'users/index'
-  post 'users/index'
-  delete 'users/index'
-  root 'users#index'
+  root 'users#log_in'
+
+  get 'users/log_in'
+  post 'users/log_in'
+  delete 'users/logout'
 
   resources :parents
   resources :students
