@@ -19,3 +19,6 @@ Teacher.create(name: "Mr. Murray", email: "TheNextBillNye@science.com", password
 Teacher.create(name: "Mrs. DeBois", email: "DStudies@SS.com", password: "02291899", student_id: 2)
 Teacher.create(name: "Mrs. Tibbets", email: "Mrs+Tibbets@AFM.com", password: "2468101214", student_id: 3)
 Teacher.create(name: "Mr. Crowley", email: "Wait@WelcometoHell.com", password: "666666666", student_id: 4)
+
+
+Grade.create(name: "A")
