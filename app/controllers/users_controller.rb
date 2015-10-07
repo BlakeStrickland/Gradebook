@@ -6,9 +6,17 @@ class UsersController < ApplicationController
   def log_in
     if request.post?
       t = Teacher.find_by_email(params[:email])
-      if t && t.authenticate(params[:password]) 
+      s = Student.find_by_email(params[:email])
+      p = Parent.find_by_email(params[:email])
+      if t && t.authenticate(params[:password])
         session[:log_in_teacher] = t.id
         redirect_to teachers_path, notice: "You did it!"
+      elsif s && s.authenticate(params[:password])
+        session[:log_in_student] = s.id
+        redirect_to students_path, notice: "You did it!"
+      elsif p && p.authenticate(params[:password])
+        session[:log_in_parent] = p.id
+        redirect_to parents_path, notice: "You did it!"
       else
         redirect_to users_log_in_path, notice: "Go jump off a short ledge."
       end
@@ -17,6 +25,9 @@ class UsersController < ApplicationController
 
   def logout
     session[:log_in_teacher] = false
+    session[:log_in_student] = false
+    session[:log_in_parent] = false
+
     redirect_to root_path
   end
   def set_params

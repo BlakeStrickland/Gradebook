@@ -21,4 +21,4 @@ Teacher.create(name: "Mrs. Tibbets", email: "Mrs+Tibbets@AFM.com", password: "24
 Teacher.create(name: "Mr. Crowley", email: "Wait@WelcometoHell.com", password: "666666666", student_id: 4)
 
 
-Grade.create(name: "A")
+Grade.create(name: "A", assignment_name: "Volcano", student_id: 1)
