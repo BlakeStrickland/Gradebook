@@ -13,10 +13,10 @@ class UsersController < ApplicationController
         redirect_to teachers_path, notice: "You did it!"
       elsif s && s.authenticate(params[:password])
         session[:log_in_student] = s.id
-        redirect_to students_path, notice: "You did it!"
+        redirect_to s, notice: "You did it!"
       elsif p && p.authenticate(params[:password])
         session[:log_in_parent] = p.id
-        redirect_to parents_path, notice: "You did it!"
+        redirect_to p, notice: "You did it!"
       else
         redirect_to users_log_in_path, notice: "Go jump off a short ledge."
       end

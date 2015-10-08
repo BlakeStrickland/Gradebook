@@ -12,7 +12,8 @@
 
 <p>
   <strong>Student:</strong>
-  <%= @teacher.student_id %>
+  <%= s = Student.find(@teacher.student_id)
+      s.name %>
 </p>
 
 <%= link_to 'Edit', edit_teacher_path(@teacher) %> |

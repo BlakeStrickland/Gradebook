@@ -1,5 +1,5 @@
 class Student < ActiveRecord::Base
-  has_many :parents
+  belongs_to :parent
   has_many :grades
   belongs_to :teacher
   has_secure_password
